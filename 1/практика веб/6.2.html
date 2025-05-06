@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            padding: 10px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+        }
+        .logo, .title {
+            background-color: #388E3C;
+            padding: 10px;
+        }
+        .main {
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #E3F2FD;
+            width: 75%;
+            padding: 20px;
+            gap: 15px;
+        }
+        .content .top {
+            width: 100%;
+            height: 100px;
+            background-color: #BBDEFB;
+        }
+        .content .bottom {
+            display: flex;
+            width: 100%;
+            gap: 15px;
+        }
+        .content .bottom div {
+            flex: 1;
+            height: 390px;
+            background-color: #BBDEFB;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #FF9800;
+            padding: 15px;
+            width: 20%;
+        }
+        .menu div {
+            background-color: #F57C00;
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #607D8B;
+            color: white;
+        }
+        .footer div {
+            background-color: #455A64;
+            padding: 10px;
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Лого</div>
+            <div class="title">Название сайта</div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="top">Контент 1</div>
+                <div class="bottom">
+                    <div>Контент 2</div>
+                    <div>Контент 3</div>
+                </div>
+            </div>
+            <div class="menu">
+                <div>Страница 1</div>
+                <div>Страница 2</div>
+                <div>Страница 3</div>
+            </div>
+        </div>
+        <div class="footer">
+            <div>Разработчик</div>
+            <div>Картинка</div>
+        </div>
+    </div>
+</body>
+</html>

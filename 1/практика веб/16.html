@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+    <p><b>Каждое задание отмеченное цифрой должно быть выполнено с помощью одной jQuery команды.</b></p>
+    <hr />
+    <p><b>1.</b></p>                                                        
+    <p id="pmtog">Покрасьте меня в зеленый цвет.</p>
+    <p><b>2.</b></p>
+    <h3 class="pr1">Мой цвет не должен быть изменен.</h3>
+    <p class="pr1">Покрасьте меня в красный цвет.</p>
+    <p><b>3.</b></p>
+    <input type="button" value="Покрасьте меня в оранжевый" />
+    <br /><br />
+    <input type="text" value="Мой цвет не должен быть изменен"/>
+    <br /><br />
+    <input type="submit" value="Мой цвет изменять не нужно"/>
+    <br /><br />
+    <p><b>4.</b></p>
+    <p class="pmb1">Покрасьте меня в синий.</p>
+    <p>Мой цвет не должен быть изменен.</p>
+    <p>Мой цвет не должен быть изменен.</p>
+    <p class="pmb2">Покрасьте меня в синий.</p>
+    <p>Мой цвет не должен быть изменен.</p>
+    <p class="pmb3">Покрасьте меня в синий.</p>
+    <p><b>5.</b></p>    
+    <div id="wrap1">
+    <p>Мой цвет не должен быть изменен.</p>
+    <p class="pmtobr">Покрасьте меня в коричневый.</p>
+    </div>
+    <p class="pmtobr">Мой цвет не должен быть изменен.</p>
+    <p><b>6. Отобразите рамку вокруг третьего (слева) изображения. (Используйте команду css("borderStyle","solid"))</b></p>
+    <img src="16/mountimg3.jpg" style="width:200px;">
+    <img src="16/mountimg1.jpg" style="width:200px;">
+    <img src="16/mountimg2.jpg" style="width:200px;">
+    <p><b>7. </b></p>
+    <div id="iwrap">
+    <input type="button" value="Покрасьте меня в красный" />
+    <br /><br />
+    <input value="Мой цвет не должен быть изменен"/>
+    <br /><br />
+    <input type="submit" value="Покрасьте меня в красный"/>
+    </div>
+    
+
+<script type="text/javascript">
+    $(document).ready(function(){
+
+// 1. Покрасить текст с id "pmtog" в зеленый цвет
+$("#pmtog").css("color", "green");
+
+// 2. Покрасить все элементы с классом "pr1" в красный цвет
+$(".pr1").css("color", "red");
+
+// 3. Покрасить все кнопки типа "button" в оранжевый цвет
+$("input[type='text']").css("color", "orange");
+
+// 4. Покрасить все элементы с классами "pmb1", "pmb2" и "pmb3" в синий цвет
+$(".pmb1, .pmb2, .pmb3").css("color", "blue");
+
+// 5. Покрасить только элементы с классом "pmtobr", находящиеся внутри элемента с id "wrap1", в коричневый цвет
+$("#wrap1 .pmtobr").css("color", "brown");
+
+// 6. Отобразить рамку вокруг третьего изображения
+$("img:eq(2)").css("borderStyle", "solid");
+
+// 7. Покрасить все кнопки типа "button" и "submit", находящиеся внутри div с id "iwrap", в красный цвет
+$("#iwrap input[type='button'], #iwrap input[type='submit']").css("color", "red");
+
+});
+
+    </script>
+
+</body>
+</html>

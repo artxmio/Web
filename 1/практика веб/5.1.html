@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4CAF50;
+            padding: 20px;
+            color: white;
+        }
+        .logo {
+            background-color: #388E3C;
+            padding: 10px;
+        }
+        .menu {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: #FF9800;
+            padding: 15px;
+        }
+        .menu div {
+            background-color: #F57C00;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: white;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #E3F2FD;
+            padding: 20px;
+        }
+        .content div {
+            width: 30%;
+            height: 200px;
+            background-color: #BBDEFB;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            background-color: #607D8B;
+            color: white;
+        }
+        .footer div {
+            background-color: #455A64;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Лого</div>
+            <div class="title">Название сайта</div>
+        </div>
+        <div class="menu">
+            <div>Страница 2</div>
+            <div>Страница 3</div>
+            <div>Страница 4</div>
+        </div>
+        <div class="content">
+            <div>Контент 1</div>
+            <div>Контент 2</div>
+            <div>Контент 3</div>
+        </div>
+        <div class="footer">
+            <div>Разработчик</div>
+            <div>Картинка</div>
+        </div>
+    </div>
+</body>
+</html>

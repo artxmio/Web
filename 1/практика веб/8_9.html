@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trekking - E-commerce</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="8_9.css">
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+    <style>
+        /* Стили для валидации */
+        label.error {
+            color: red;
+            font-size: 0.8em;
+            margin-top: 5px;
+            display: block;
+        }
+        input.error, select.error, textarea.error {
+            border: 1px solid red;
+        }
+        input.valid, select.valid, textarea.valid {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="text-slider">
+        <h2 id="slider-text">Добро пожаловать в наш магазин!</h2>
+    </section>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo"></div>
+        <nav>
+            <a href="#" id="myButton">Home</a>
+            <a href="#" id="myButton2">Products</a>
+            <div class="cart" id="colorInput"></div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">  
+        <div class="hero-content">
+            <h1>Our clothing , your comfort</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            
+            <!-- Форма для валидации -->
+            <form id="contactForm">
+                <div>
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Телефон (формат: xxx-xxx-xxxx):</label>
+                    <input type="text" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}">
+                </div>
+                <div>
+                    <label for="password">Пароль (мин. 6 символов):</label>
+                    <input type="password" id="password" name="password" minlength="6" required>
+                </div>
+                <div>
+                    <label for="confirm_password">Подтвердите пароль:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" equalTo="#password">
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+            
+            <a href="#" id="link1">ссылка 1</a>
+            <p></p>
+            <a href="#" id="link2">ссылка 2</a>
+            <p></p>
+            <a href="#" id="link3">ссылка 3</a>
+            <p></p>
+            <button onclick="replaceLinks()">Нажмите на меня!</button>
+            <h3>Калькулятор сложения</h3>
+
+            <input type="number" id="num1" placeholder="Первое число">
+            <input type="number" id="num2" placeholder="Второе число">
+            <p></p>
+            <button onclick="calculateSum()">Нажмите чтобы сложить</button>
+            
+            <p id="result"></p>
+        </div>
+        <div class="scroll-icon"></div>
+    </section>
+
+    <!-- Filter -->
+    <section class="filters">
+        <h2 class="visually-hidden">Product Filters</h2>
+        <div class="left">
+            <label><input type="checkbox" checked> Men</label>
+            <label><input type="checkbox" checked> Women</label>
+            <label><input type="checkbox"> Children</label>
+        </div>
+        <button>See All Products</button>
+    </section>
+
+    <section class="image-slider">
+        <button class="slider-btn prev" onclick="prevSlide()">❮</button>
+        <div class="slides">
+            <img class="slide" src="8_9/tshirt-men.jpg" alt="T-Shirt">
+            <img class="slide" src="8_9/pants.jpg" alt="Pants Forclaz">
+            <img class="slide" src="8_9/backpack.jpg" alt="Backpack">
+            <img class="slide" src="8_9/jacket.jpg" alt="Jacket">
+        </div>
+        <button class="slider-btn next" onclick="nextSlide()">❯</button>
+    </section>
+
+    <!-- Product Section with Tabs -->
+    <section class="products">
+        <div id="productTabs">
+            <ul>
+                <li><a href="#menTab">Men</a></li>
+                <li><a href="#womenTab">Women</a></li>
+                <li><a href="#allTab">All Products</a></li>
+            </ul>
+            
+            <div id="menTab">
+                <div class="product-row">
+                    <div class="product">
+                        <div class="colors"></div>
+                        <img src="8_9/tshirt-men.jpg" alt="T-Shirt">
+                        <p>T-SHIRT <span>5,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/pants.jpg" alt="Pants Forclaz">
+                        <p>PANTS FORCLAZ <span>30,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/backpack.jpg" alt="Backpack">
+                        <p>BACKPACK <span>60,00€</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="womenTab">
+                <div class="product-row">
+                    <div class="product">
+                        <img src="8_9/jacket.jpg" alt="Jacket">
+                        <p>GIACKET <span>60,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/trekking-shoes.jpg" alt="Trekking Shoes">
+                        <p>TREKKING SHOES <span>80,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <div class="colors"></div>
+                        <img src="8_9/tshirt-women.jpg" alt="T-Shirt">
+                        <p>T-SHIRT <span>20,00€</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="allTab">
+                <div class="product-row">
+                    <div class="product">
+                        <div class="colors"></div>
+                        <img src="8_9/tshirt-men.jpg" alt="T-Shirt">
+                        <p>T-SHIRT (Men) <span>5,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/pants.jpg" alt="Pants Forclaz">
+                        <p>PANTS FORCLAZ <span>30,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/backpack.jpg" alt="Backpack">
+                        <p>BACKPACK <span>60,00€</span></p>
+                    </div>
+                </div>
+                <div class="product-row">
+                    <div class="product">
+                        <img src="8_9/jacket.jpg" alt="Jacket">
+                        <p>GIACKET (Women) <span>60,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <img src="8_9/trekking-shoes.jpg" alt="Trekking Shoes">
+                        <p>TREKKING SHOES <span>80,00€</span></p>
+                    </div>
+                    <div class="product">
+                        <div class="colors"></div>
+                        <img src="8_9/tshirt-women.jpg" alt="T-Shirt">
+                        <p>T-SHIRT (Women) <span>20,00€</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <h3>About Us</h3>
+        
+        <!-- Добавленный аккордеон -->
+        <div id="aboutAccordion">
+            <h3>Наша история</h3>
+            <div>
+                <p>Мы начали свой путь в 2010 году с небольшого магазина в центре города. Сегодня мы - одна из крупнейших сетей по продаже туристического снаряжения в стране.</p>
+            </div>
+            <h3>Наши ценности</h3>
+            <div>
+                <p>Качество, надежность и забота о клиентах - это наши основные принципы. Мы тщательно отбираем каждый товар в нашем ассортименте.</p>
+            </div>
+            <h3>Наша команда</h3>
+            <div>
+                <p>Наши сотрудники - это опытные профессионалы и энтузиасты активного отдыха. Они всегда готовы помочь вам с выбором.</p>
+            </div>
+        </div>
+        
+        <h2 class="zzz">Заголовок, не поменяется.</h2>
+        <p class="zzz">Абзац с классом zzz.</p>
+        <p class="zzz">Абзац с классом zzz.</p>
+        <p>Просто абзац, не поменяется.</p>
+        
+        <button onclick="changeParagraphs()">Изменить абзацы</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="info">
+                <h4>TREKKING</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="credits">
+                <p>Credits | Privacy | About | Contact</p>
+                <p>Design by Gianluca Cosetta</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Добавляем jQuery, jQuery UI и jQuery Validation -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+          alert('Привет!');
+        });
+        function changeButtonText() {
+            const button = document.getElementById("myButton2");
+            button.textContent  = button.textContent === "Products" ? "Спасибо!" : "Products";
+        }
+        document.getElementById("myButton2").addEventListener("click", changeButtonText);
+
+        function changeTextColor() {
+            const input = document.getElementById("colorInput");
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(10);
+            input.style.backgroundColor = randomColor;
+        }
+        document.getElementById("colorInput").addEventListener("click", changeTextColor);
+
+        function replaceLinks() {
+            document.getElementById("link1").textContent = "Google";
+            document.getElementById("link1").href = "https://www.google.com";
+
+            document.getElementById("link2").textContent = "Microsoft Edge";
+            document.getElementById("link2").href = "https://www.MicrosoftEdge.com";
+
+            document.getElementById("link3").textContent = "Opera GX";
+            document.getElementById("link3").href = "https://www.OperaGX.com";
+        }
+
+        function calculateSum() {
+            const number1 = parseFloat(document.getElementById("num1").value) || 0;
+            const number2 = parseFloat(document.getElementById("num2").value) || 0;
+            const sum = number1 + number2;
+            document.getElementById("result").textContent = `Результат: ${sum}`;
+        }
+
+        function changeParagraphs() {
+            const zzzElements = document.querySelectorAll('.zzz');  
+            zzzElements.forEach((element, index) => {
+                element.textContent = (index + 1).toString();
+            });
+        }
+
+        const texts = [
+            "Добро пожаловать в наш магазин!",
+            "Лучшие товары для активного отдыха!",
+            "Скидки на все категории товаров!",
+            "Купите сейчас и получите бонус!"
+        ];
+        let index = 0;
+        function changeText() {
+            index = (index + 1) % texts.length;
+            document.getElementById("slider-text").textContent = texts[index];
+        }
+        setInterval(changeText, 3000);
+
+        let currentIndex = 0;
+        function showSlide(index) {
+            const slides = document.querySelector(".slides");
+            const totalSlides = document.querySelectorAll(".slide").length;
+            if (index >= totalSlides) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = totalSlides - 1;
+            } else {
+                currentIndex = index;
+            }
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+        setInterval(nextSlide, 3000);
+
+        // Инициализация аккордеона и табов
+        $(function() {
+            $("#aboutAccordion").accordion({
+                collapsible: true,
+                heightStyle: "content"
+            });
+            
+            $("#productTabs").tabs();
+            
+            // Валидация формы
+            $("#contactForm").validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    phone: {
+                        pattern: /^\d{3}-\d{3}-\d{4}$/
+                    },
+                    password: {
+                        required: true,
+                        minlength: 6
+                    },
+                    confirm_password: {
+                        equalTo: "#password"
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Пожалуйста, введите ваше имя",
+                        minlength: "Имя должно содержать не менее 2 символов"
+                    },
+                    email: {
+                        required: "Пожалуйста, введите ваш email",
+                        email: "Пожалуйста, введите корректный email"
+                    },
+                    phone: {
+                        pattern: "Пожалуйста, введите телефон в формате xxx-xxx-xxxx"
+                    },
+                    password: {
+                        required: "Пожалуйста, введите пароль",
+                        minlength: "Пароль должен содержать не менее 6 символов"
+                    },
+                    confirm_password: {
+                        equalTo: "Пароли должны совпадать"
+                    }
+                },
+                submitHandler: function(form) {
+                    alert("Форма успешно отправлена!");
+                    form.submit();
+                }
+            });
+            
+            // Добавление метода для проверки формата телефона
+            $.validator.addMethod("pattern", function(value, element, param) {
+                return this.optional(element) || param.test(value);
+            }, "Неверный формат");
+        });
+    </script>
+</body>
+
+</html>

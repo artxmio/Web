@@ -1,0 +1,248 @@
+/* ====== Fonts ====== */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f9f9f5;
+}
+h1, h2, h3, h4 {
+    font-family: 'Fredoka One', cursive;
+}
+
+/* ====== Header ====== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+.header .left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header .logo {
+    width: 80px;
+    height: 80px;
+    background: url('8_9/logo.png') no-repeat center / contain;
+}
+.header nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.header .cart {
+    width: 100px;
+    height: 100px;
+    background: url('8_9/cart.png') no-repeat center / contain;
+}
+
+/* ====== Hero ====== */
+.hero {
+    background: url('8_9/hero.jpg') no-repeat center / cover;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+.hero-content {
+    max-width: 600px;
+}
+.hero h1 {
+    font-size: 36px;
+}
+.hero p {
+    margin-top: 15px;
+}
+.scroll-icon {
+    position: absolute;
+    bottom: 30px;
+    width: 80px;
+    height: 80px;
+    background: url('8_9/arrow.png') no-repeat center / contain;
+}
+
+/* ====== Filters ====== */
+.filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: #f2f6f1;
+}
+.filters .left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.filters label {
+    font-weight: bold;
+}
+.filters button {
+    background: #9f8c5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* ====== Products ====== */
+.products {
+    padding: 50px;
+}
+.products h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+.product-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.product {
+    background: #fff;
+    padding: 15px;
+    border: 5px solid #dcdcdc;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+.product img {
+    width: 100%;
+    height: auto;
+}
+.product p {
+    margin-top: auto;
+    padding-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product span {
+    display: block;
+    color: #9f8c5f;
+}
+.colors {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 10px;
+    background: url('8_9/colors.png') no-repeat center / contain;
+}
+.product p .price {
+    color: #9f8c5f;
+    font-weight: bold;
+}
+.product::before {
+    content: "SIZE";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 10px;
+    background: #f2f6f1;
+    padding: 2px 5px;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+/* ====== About ====== */
+.about {
+    background: #c2b183;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+/* ====== Footer ====== */
+footer {
+    background: #3e3e3e;
+    color: white;
+    padding: 30px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-content .info {
+    max-width: 400px;
+}
+.footer-content .credits {
+    text-align: right;
+}
+
+/* ====== Responsive ====== */
+@media(max-width: 768px) {
+    .header, .filters, .product-row, .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .product {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.image-slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}

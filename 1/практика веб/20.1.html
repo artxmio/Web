@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Заголовок 1</h3>
+    <p><span>Текст в span 1</span></p>
+    <img src="16/mountimg1.jpg" alt="Изображение 1">
+    
+    <h3>Заголовок 2</h3>
+    <p><span>Текст в span 2</span></p>
+    <img src="16/mountimg2.jpg" alt="Изображение 2" id="www">
+    
+    <h3>Заголовок 3</h3>
+    <p>Просто абзац текста</p>
+    <img src="16/mountimg3.jpg" alt="Изображение 3">
+    
+    <p>Еще один абзац</p>
+
+    <script>
+        // 1. Обернуть каждый <h3> в <div>
+        const h3Elements = document.querySelectorAll('h3');
+        h3Elements.forEach(h3 => {
+            const div = document.createElement('div');
+            h3.parentNode.insertBefore(div, h3);
+            div.appendChild(h3);
+        });
+
+        // 2. Найти все теги <span>, обернутые абзацами <p>, и удалить эти абзацы, не трогая <span>
+        const spansInP = document.querySelectorAll('p > span');
+        spansInP.forEach(span => {
+            const p = span.parentNode;
+            p.parentNode.insertBefore(span, p);
+            p.parentNode.removeChild(p);
+        });
+
+        // 3. Перед каждым абзацем <p> вставить <span> с текстом '!!!', а после абзацев - span с текстом '???'
+        const pElements = document.querySelectorAll('p');
+        pElements.forEach(p => {
+            // Вставляем !!! перед абзацем
+            const spanBefore = document.createElement('span');
+            spanBefore.textContent = '!!!';
+            p.parentNode.insertBefore(spanBefore, p);
+            
+            // Вставляем ??? после абзаца
+            const spanAfter = document.createElement('span');
+            spanAfter.textContent = '???';
+            p.parentNode.insertBefore(spanAfter, p.nextSibling);
+        });
+
+        // 4. Получить содержимое атрибута src картинки по ее id, равным www
+        const imgWithId = document.getElementById('www');
+        if (imgWithId) {
+            console.log('Src изображения с id="www":', imgWithId.src);
+        }
+
+        // 5. Получить содержимое атрибутов src всех картинок на странице и последовательно вывести их алертом
+        const allImages = document.querySelectorAll('img');
+        let srcList = '';
+        allImages.forEach((img, index) => {
+            srcList += `Изображение ${index + 1}: ${img.src}\n`;
+        });
+        
+        // Выводим все src через alert
+        alert(srcList);
+    </script>
+</body>
+</html>

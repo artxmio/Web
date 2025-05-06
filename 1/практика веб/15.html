@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="date" id="birthday">
+    <p id="result"></p>
+    <p id="result"></p>
+
+    <script>
+        var date = new Date();
+        var mounths = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь'];
+        alert(mounths[date.getMonth()]); 
+
+        var date = new Date(2015, 1, 7);
+        var days = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб'];
+        alert(days[date.getMonth()]); 
+
+        var now = new Date();
+        var date = new Date(1970, 1, 1);
+        var diff = now.getTime() - date.getTime();
+        alert(diff);
+
+        var now = new Date();
+        var date = new Date(2015, 23, 4, 12, 59, 59);
+        var diff = now - date;
+        document.write(diff);
+
+        document.getElementById('birthday').addEventListener('change', function() {
+            const birthday = new Date(this.value);
+            if (isNaN(birthday)) {
+                document.getElementById('result').textContent = 'Введите корректную дату';
+                return;
+            }
+            
+            const today = new Date();
+            let nextBirthday = new Date(today.getFullYear(), birthday.getMonth(), birthday.getDate());
+            if (nextBirthday < today) {
+                nextBirthday.setFullYear(today.getFullYear() + 1);
+            }
+            
+            const diffDays = Math.ceil((nextBirthday - today) / (1000 * 60 * 60 * 24));
+            document.getElementById('result').textContent = `До дня рождения: ${diffDays} дней`;
+        });
+
+        function getZodiacSign(day, month) {
+            const zodiacSigns = [
+                "Козерог", "Водолей", "Рыбы", "Овен", "Телец", "Близнецы",
+                "Рак", "Лев", "Дева", "Весы", "Скорпион", "Стрелец", "Козерог"
+            ];
+            const zodiacDates = [20, 19, 20, 20, 21, 21, 22, 22, 22, 23, 23, 22];
+
+            return day > zodiacDates[month] ? zodiacSigns[month + 1] : zodiacSigns[month];
+        }
+        document.getElementById('birthday').addEventListener('change', function () {
+            const birthday = this.value;
+            const result = document.getElementById('result');
+
+            if (!birthday) {
+                result.innerHTML = "Введите дату";
+                return;
+            }
+
+            const birthDate = new Date(birthday);
+            const day = birthDate.getDate();
+            const month = birthDate.getMonth(); // Номера месяцев начинаются с 0
+
+            const zodiacSign = getZodiacSign(day, month);
+            result.innerHTML = "Ваш знак зодиака: " + zodiacSign;
+        });
+        
+    </script>
+</body>
+</html>

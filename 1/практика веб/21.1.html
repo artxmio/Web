@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .controls {
+            margin-bottom: 20px;
+        }
+        button {
+            margin-right: 10px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .list-item {
+            transition: all 0.3s ease;
+        }
+        .hidden {
+            opacity: 0;
+        }
+        .darkened {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button onclick="animateList('disappear')">исчезнуть</button>
+        <button onclick="animateList('appear')">появится</button>
+        <button onclick="animateList('darken')">затемнить</button>
+        <button onclick="animateList('lighten')">оттемнить</button>
+    </div>
+
+    <ol id="myList">
+        <li class="list-item">1. пункт списка</li>
+        <li class="list-item">2. пункт списка</li>
+        <li class="list-item">3. пункт списка</li>
+        <li class="list-item">4. пункт списка</li>
+        <li class="list-item">5. пункт списка</li>
+        <li class="list-item">6. пункт списка</li>
+        <li class="list-item">7. пункт списка</li>
+        <li class="list-item">8. пункт списка</li>
+        <li class="list-item">9. пункт списка</li>
+        <li class="list-item">10. пункт списка</li>
+        <li class="list-item">11. пункт списка</li>
+        <li class="list-item">12. пункт списка</li>
+        <li class="list-item">13. пункт списка</li>
+        <li class="list-item">14. пункт списка</li>
+        <li class="list-item">15. пункт списка</li>
+        <li class="list-item">16. пункт списка</li>
+    </ol>
+
+    <script>
+        function animateList(action) {
+            const items = document.querySelectorAll('.list-item');
+            
+            items.forEach(item => {
+                switch(action) {
+                    case 'disappear':
+                        item.classList.add('hidden');
+                        break;
+                    case 'appear':
+                        item.classList.remove('hidden');
+                        break;
+                    case 'darken':
+                        item.classList.add('darkened');
+                        break;
+                    case 'lighten':
+                        item.classList.remove('darkened');
+                        break;
+                }
+            });
+        }
+    </script>
+</body>
+</html>

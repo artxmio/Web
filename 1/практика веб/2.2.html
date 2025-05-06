@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Домашняя страничка Чугунов Никита</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+        }
+        nav {
+            width: 30%;
+            background: lightgray;
+            padding: 20px;
+        }
+        main {
+            flex: 1;
+            background: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>Чугунов Никита Техник Программист</header>
+    <div class="container">
+        <nav>Меню</nav>
+        <main>Контент</main>
+    </div>
+    <footer>Подвал сайта</footer>
+</body>
+</html>

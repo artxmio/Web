@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        #animatedBlock {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .instructions {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Анимированный блок</h2>
+    <p>Кликайте по блоку для анимации</p>
+    
+    <div id="animatedBlock">Кликни меня</div>
+    
+    <div class="instructions">
+        <h3>Задание:</h3>
+        <ol>
+            <li>При щелчке по блоку он перемещается вправо</li>
+            <li>При нескольких щелчках по блоку он перемещается каждый раз вправо</li>
+            <li>При нескольких щелчках по блоку он увеличивается в размерах каждый раз</li>
+            <li>При нескольких щелчках по блоку он увеличивает свою длину каждый раз вправо</li>
+        </ol>
+    </div>
+
+    <script>
+        const block = document.getElementById('animatedBlock');
+        let moveCount = 0;
+        let scaleCount = 0;
+        let widthCount = 0;
+
+        block.addEventListener('click', function() {
+            // 2.1 и 2.2 - перемещение вправо
+            moveCount += 20;
+            this.style.left = `${moveCount}px`;
+            
+            // 2.3 - увеличение размеров
+            scaleCount += 0.1;
+            this.style.transform = `scale(${1 + scaleCount})`;
+            
+            // 2.4 - увеличение длины вправо
+            widthCount += 20;
+            this.style.width = `${100 + widthCount}px`;
+        });
+    </script>
+</body>
+</html>

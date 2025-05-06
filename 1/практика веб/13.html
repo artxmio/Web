@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">алерт привет</button>
+    <p></p>
+    <input type="text" id="myInput" value="???">
+<button id="myButton2">Вопросы на !!!</button>
+<p></p>
+<input type="text" id="myInput2" placeholder="Введите текст">
+<button onclick="showInputValue()">Показать текст</button>
+<p></p>
+<input type="number" id="myInput3" placeholder="Введите число">
+<button onclick="showSquare()">Возвести в квадрат</button>
+<p></p>
+<input type="text" id="input1" value="Первое значение">
+<input type="text" id="input2" value="Второе значение">
+<button onclick="swapInputs()">Поменять местами</button>
+<p></p>
+<input type="button" id="myButton4" value="Нажми меня" onclick="changeButtonText()">
+<p></p>
+
+<input type="text" id="colorInput" value="Текст для изменения">
+<input type="button" value="Изменить цвет" onclick="changeTextColor()">
+<p></p>
+
+<input type="text" id="myInput5" placeholder="Введите текст">
+<input type="button" value="Заблокировать" onclick="disableInput()">
+<input type="button" value="Разблокировать" onclick="enableInput()">
+<p></p>
+
+<button id="clickButton">></button>
+
+<p></p>
+
+<input type="text" id="numberInput" placeholder="Введите число!">
+<p></p>
+    <input type="text" id="resultInput" placeholder="Здесь появится результат" readonly>
+    <button id="calculateButton">Нажми на меня!</button>
+    <div id="errorMessage" class="error"></div>
+
+
+<script>
+  document.getElementById('myButton').addEventListener('click', function() {
+    alert('Привет!');
+  });
+  document.getElementById("myButton2").addEventListener("click", function() {
+    document.getElementById("myInput").value = "!!!";
+  });
+
+  function showInputValue() {
+    const inputText = document.getElementById("myInput2").value;
+    alert(inputText);
+  }
+  function showSquare() {
+    const input = document.getElementById("myInput3");
+    const value = parseFloat(input.value); 
+    
+    if (isNaN(value)) {
+      alert("Ошибка! Введите число.");
+    } else {
+      const squared = value * value;
+      alert(`Квадрат числа ${value} = ${squared}`);
+    }
+  }
+
+  function swapInputs() {
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const temp = input1.value;
+    input1.value = input2.value;
+    input2.value = temp;
+  }
+
+  function changeButtonText() {
+    const button = document.getElementById("myButton4");
+    button.value = button.value === "Нажми меня" ? "Спасибо!" : "Нажми меня";
+  }
+
+  function changeTextColor() {
+    const input = document.getElementById("colorInput");
+    const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    input.style.color = randomColor;
+  }
+
+  function disableInput() {
+    document.getElementById("myInput5").disabled = true;
+  }
+  
+  function enableInput() {
+    document.getElementById("myInput5").disabled = false;
+  }
+
+  let count = 0;
+        const button = document.getElementById('clickButton');
+
+        button.addEventListener('click', function() {
+            count++;
+            this.textContent = count;
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 100);
+        });
+  document.getElementById("calculateButton").addEventListener("click", function() {
+            const input = document.getElementById("numberInput");
+            const result = document.getElementById("resultInput");
+            const error = document.getElementById("errorMessage");
+            
+            error.textContent = "";
+            const number = parseFloat(input.value);
+            if (isNaN(number)) {
+                error.textContent = "Ошибка! Пожалуйста, введите число.";
+                result.value = "";
+            } else {
+                const square = number * number;
+                result.value = square;
+            }
+        });
+</script>
+</body>
+</html>

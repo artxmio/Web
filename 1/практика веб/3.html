@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        div {
+            background-color: lightblue;
+            background-image: url('background.jpg');
+            height: 200px;
+            width: 400px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 30px;
+        }
+        a {
+            font-size: 20px;
+            color: red;
+        }
+        img {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px;
+            width: 150px;
+            height: 150px;
+            vertical-align: middle;
+        }
+        label {
+            font-size: 18px;
+            color: blue;
+            margin: 10px;
+        }
+        p {
+            margin: 15px;
+            background-color: lightgray;
+        }
+        table {
+            background-color: lightyellow;
+            border-collapse: collapse;
+        }
+        tr {
+            text-align: center;
+            border-color: green;
+        }
+        td {
+            height: 50px;
+            border: 1px solid black;
+        }
+        ul, ol {
+            list-style-type: square;
+            list-style-image: url('bullet.png');
+            list-style-position: inside;
+        }
+    </style>
+</head>
+<body>
+    <div>Это div с фоном, границами и отступами</div>
+    <a href="#">Ссылка с изменённым цветом и размером шрифта</a>
+    <br>
+    <img src="image.jpg" alt="Картинка">
+    <br>
+    <label>Метка с отступами и цветом</label>
+    <p>Абзац с отступами и фоновым цветом</p>
+    <table>
+        <tr>
+            <td>Ячейка 1</td>
+            <td>Ячейка 2</td>
+        </tr>
+        <tr>
+            <td>Ячейка 3</td>
+            <td>Ячейка 4</td>
+        </tr>
+    </table>
+    <ul>
+        <li>Элемент списка</li>
+        <li>Элемент списка</li>
+    </ul>
+    <ol>
+        <li>Элемент списка</li>
+        <li>Элемент списка</li>
+    </ol>
+</body>
+</html>

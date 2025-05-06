@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    .center-header {
+        text-align: center;
+    }
+    .borderrad  {
+        border-radius: 6px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="center-header text-danger font-weight-bold">
+  <h2>"Пятерочка"</h2>
+    </div>
+  <p class="font-weight-bold text-white bg-danger d-inline borderrad">Пятерочка </p><p class="d-inline">- росийская сеть продовольственных магазинов "у дома" в составе компании X5 Retail Group. Объединяет более 16.7 тыс. магазинов, обслуживаемых 31 распределительным центром.</p>                      
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th class="text-danger font-weight-bold">Продукты</th>
+        <th class="text-danger font-weight-bold">Цена</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-light">
+        <td class="text-danger">Coca-Cola 3л.</td>
+        <td class="text-danger">2.05 руб</td>
+      </tr>
+      <tr>
+        <td class="text-danger">Nescafe 300 гр.</td>
+        <td class="text-danger">7 руб.</td>
+      </tr>
+      <tr class="bg-light">
+        <td class="text-danger">Kinder Surprise</td> 
+        <td class="text-danger">5.23 руб</td>
+      </tr>
+      <tr>
+        <td class="text-danger">Говяжья вырезка (для стейка) 1кг.</td> 
+        <td class="text-danger">11.32 руб</td>
+      </tr>
+      <tr class="bg-light">
+        <td class="text-danger">Молоко 15% 1л.</td> 
+        <td class="text-danger">1.53 руб</td>
+      </tr>
+    </tbody>
+  </table>
+<h2 class="text-danger">Статистика:</h2>
+<p>Всего продукции</p>
+<div class="progress">
+    <div class="progress-bar bg-info" style="width:80%"></div>
+  </div><br>
+  <p>Продано</p>
+  <div class="progress">
+    <div class="progress-bar bg-success" style="width:45%"></div>
+  </div><br>
+  <p>В запасе</p>
+  <div class="progress">
+    <div class="progress-bar bg-danger" style="width:60%"></div>
+  </div><br>
+</div>
+</body>
+</html>

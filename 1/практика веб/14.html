@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#" id="link1">ссылка 1</a>
+    <p></p>
+    <a href="#" id="link2">ссылка 2</a>
+    <p></p>
+    <a href="#" id="link3">ссылка 3</a>
+    <p></p>
+
+    <button onclick="replaceLinks()">Нажмите на меня!</button>
+    <script>
+        function replaceLinks() {
+            document.getElementById("link1").textContent = "Google";
+            document.getElementById("link1").href = "https://www.google.com";
+
+            document.getElementById("link2").textContent = "Microsoft Edge";
+            document.getElementById("link2").href = "https://www.MicrosoftEdge.com";
+
+            document.getElementById("link3").textContent = "Opera GX";
+            document.getElementById("link3").href = "https://www.OperaGX.com";
+        }
+    </script>
+</body>
+</html>
