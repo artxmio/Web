@@ -1,0 +1,8 @@
+div {
+    background-image: linear-gradient(to right, lightblue, white);
+}
+
+ul {
+    list-style-image: url('bullet.png');
+    list-style: square;
+}

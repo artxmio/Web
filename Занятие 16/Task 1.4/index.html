@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эффекты элементов</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <style>
+        #el1,
+        #el2 {
+            width: 300px;
+            height: 300px;
+            margin: 20px;
+            line-height: 100px;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: lightgray;
+        }
+
+        .buttons {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="el1">Элемент 1: Содержимое первого элемента</div>
+    <div id="el2">Элемент 2: Содержимое второго элемента</div>
+
+    <div class="buttons">
+        <button id="effect1">Применить эффекты 1</button>
+        <button id="effect2">Применить эффекты 2</button>
+        <button id="effect3">Применить эффекты 3</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#effect1").on("click", function () {
+                $("#el1").effect("bounce", { times: 3 }, 500);
+                $("#el2").effect("pulsate", { times: 3 }, 500);
+            });
+
+            $("#effect2").on("click", function () {
+                $("#el1").effect("explode", { pieces: 16 }, 500);
+                $("#el2").fadeOut(500);
+            });
+
+            $("#effect3").on("click", function () {
+                $("#el1").hide().show("slide", { direction: "up" }, 500);
+                $("#el2").hide().show("drop", { direction: "down" }, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

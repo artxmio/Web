@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шапка веб-сайта</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <h1>Xman<span style="color: red;">Bank</span></h1>
+        </div>
+        <nav class="nav">
+            <a href="#myaccount">My account</a>
+            <span class="separator">|</span>
+            <a href="#settings">Settings</a>
+            <span class="separator">|</span>
+            <a href="#logout" class="logout">Logout</a>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <div class="links">
+            <a href="#" class="active">Home</a>
+            <a href="#">About us</a>
+            <a href="#">Our services</a>
+            <a href="#">Deposits</a>
+            <a href="#">FAQs</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="contact">
+            Call us: (2457) 555 222 333
+        </div>
+    </div>
+
+    <div class="autocomplete-container">
+        <label for="autocomplete">Enter country:</label>
+        <input id="autocomplete" type="text" placeholder="Start typing country name...">
+    </div>
+
+    <div id="accordion">
+        <h3>Section 1: Atmosphere</h3>
+        <div>
+            <p><b>Атмосфера</b> — газовая оболочка небесного тела, удерживаемая около него гравитацией...</p>
+        </div>
+        <h3>Section 2: Biosphere</h3>
+        <div>
+            <p><b>Биосфера</b> — оболочка Земли, заселённая живыми организмами...</p>
+        </div>
+        <h3>Section 3: Noosphere</h3>
+        <div>
+            <p><b>Ноосфера</b> — сфера взаимодействия общества и природы...</p>
+        </div>
+        <h3>Section 4: Hydrosphere</h3>
+        <div>
+            <p><b>Гидросфера</b> — это водная оболочка Земли...</p>
+        </div>
+    </div>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#tab1">Tab 1</a></li>
+            <li><a href="#tab2">Tab 2</a></li>
+            <li><a href="#tab3">Tab 3</a></li>
+        </ul>
+        <div id="tab1">
+            <p>Content for Tab 1</p>
+        </div>
+        <div id="tab2">
+            <p>Content for Tab 2</p>
+        </div>
+        <div id="tab3">
+            <p>Content for Tab 3</p>
+        </div>
+    </div>
+
+    <div id="progressbar"></div>
+
+    <button id="dialog-btn1">Открыть первое окно</button>
+    <button id="dialog-btn2">Открыть второе окно</button>
+    <button id="dialog-btn3">Открыть третье окно</button>
+
+    <div id="dialog1" title="Гидросфера">
+        <p>Гидросфера - это водная оболочка Земли.</p>
+    </div>
+    <div id="dialog2" title="Ноосфера">
+        <p>Ноосфера - сфера взаимодействия общества и природы.</p>
+    </div>
+    <div id="dialog3" title="Биосфера">
+        <p>Биосфера - это оболочка Земли, заселенная живыми организмами.</p>
+    </div>
+
+    <footer class="footer">
+        <div class="left">100% SECURE</div>
+        <div class="right">Copyright &copy; 2013 Cssauthor.com</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

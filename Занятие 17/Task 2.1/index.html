@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание с jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h3>Заголовок 1</h3>
+    <h3>Заголовок 2</h3>
+    <h3>Заголовок 3</h3>
+
+    <p><span>Текст внутри абзаца</span></p>
+    <p>Простой абзац</p>
+    <p><span>Ещё один текст внутри абзаца</span></p>
+
+    <img id="www" src="images/1.jpg" alt="Картинка 1" width="100">
+    <img src="images/2.jpg" alt="Картинка 2" width="100">
+    <img src="images/3.jpg" alt="Картинка 3" width="100">
+
+    <script>
+        $(document).ready(function () {
+            $("h3").wrap("<div></div>");
+
+            $("p").has("span").each(function () {
+                $(this).replaceWith($(this).find("span"));
+            });
+
+            $("p").before('<span>!!!</span>');
+
+            $("p").after('<span>???</span>');
+
+            const srcForId = $("#www").attr("src");
+            console.log("SRC картинки с id='www':", srcForId);
+
+            $("img").each(function () {
+                alert($(this).attr("src"));
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация элементов</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            width: 300px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .controls span {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+            color: white;
+            background-color: teal;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div class="list-item">1. пункт списка</div>
+        <div class="list-item">2. пункт списка</div>
+        <div class="list-item">3. пункт списка</div>
+        <div class="list-item">4. пункт списка</div>
+        <div class="list-item">5. пункт списка</div>
+        <div class="list-item">6. пункт списка</div>
+        <div class="list-item">7. пункт списка</div>
+        <div class="list-item">8. пункт списка</div>
+        <div class="list-item">9. пункт списка</div>
+        <div class="list-item">10. пункт списка</div>
+        <div class="list-item">11. пункт списка</div>
+        <div class="list-item">12. пункт списка</div>
+        <div class="list-item">13. пункт списка</div>
+        <div class="list-item">14. пункт списка</div>
+        <div class="list-item">15. пункт списка</div>
+        <div class="list-item">16. пункт списка</div>
+    </div>
+    <div class="controls">
+        <span id="disappear">исчезнуть</span>
+        <span id="appear">появится</span>
+        <span id="darken">затемнить</span>
+        <span id="cancel">отменить</span>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#disappear").on("click", function () {
+                $("#box").fadeOut(500);
+            });
+
+            $("#appear").on("click", function () {
+                $("#box").fadeIn(500);
+            });
+
+            $("#darken").on("click", function () {
+                $("#box").animate({ backgroundColor: "gray", opacity: 0.5 }, 500);
+            });
+
+            $("#cancel").on("click", function () {
+                $("#box").stop(true, true).css({ backgroundColor: "lightblue", opacity: 1 }).fadeIn(500);
+            });
+        });
+    </script>
+</body>
+
+</html>

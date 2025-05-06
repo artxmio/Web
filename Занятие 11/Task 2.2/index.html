@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шапка веб-сайта</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="logo" class="logo-img">
+            <h1>Xman<span style="color: red;">Bank</span></h1>
+        </div>
+        <nav class="nav">
+            <a href="#myaccount" class="link">My account</a>
+            <span class="separator">|</span>
+            <a href="#settings" class="link">Settings</a>
+            <span class="separator">|</span>
+            <a href="#logout" class="link">Logout</a>
+        </nav>
+    </header>
+
+    <div class="menu">
+        <div class="links">
+            <a href="#" class="active link">Home</a>
+            <a href="#" class="link">About us</a>
+            <a href="#" class="link">Our services</a>
+            <a href="#" class="link">Deposits</a>
+            <a href="#" class="link">FAQs</a>
+            <a href="#" class="link">Contact us</a>
+        </div>
+        <div class="contact">
+            Call us: (2457) 555 222 333
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="slider">
+            <img src="images/slide.png" alt="Slider image">
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <img src="images/user.png" alt="User Icon">
+                <h1>CUSTOMER LOGIN</h1>
+            </div>
+            <input type="text" placeholder="User name">
+            <input type="password" placeholder="Password">
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+                <a href="#" class="forget-link link">Forget your password?</a>
+            </div>
+            <button>Log in</button>
+            <div class="not-member">
+                <p>Not a member?</p>
+                <button>Open an account</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="block">
+            <h2>Our <span style="color:red">Specialites</span></h2>
+            <ul>
+                <li>orem Ipsum is simply dummy text of the printing and typesettin</li>
+                <li>orem Ipsum is simply dummy text of the printing and typesettin</li>
+                <li>orem Ipsum is simply dummy text of the printing and typesettin</li>
+                <li>orem Ipsum is simply dummy text of the printing and typesettin</li>
+                <li>orem Ipsum is simply dummy text of the printing and typesettin</li>
+            </ul>
+        </div>
+        <div class="block">
+            <h2>How it <span style="color:red">work</span></h2>
+            <img src="images/bank.png" alt="Пример изображения">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="left">100% SECURE</div>
+        <div class="right">Copyright &copy; 2013 Cssauthor.com</div>
+    </footer>
+
+    <div class="buttons">
+        <button onclick="replaceLinks()">Изменить ссылки</button>
+        <button onclick="updateParagraphs()">Обновить абзацы</button>
+        <div style="font-size: 20px; text-align: center; margin-top: 20px;">
+            <input type="text" id="number1" style="width: 50px; text-align: center;"> +
+            <input type="text" id="number2" style="width: 50px; text-align: center;"> =
+            <span id="result">?</span>
+            <button onclick="calculateSum()">Сложить числа</button>
+        </div>
+    </div>
+</body>
+
+</html>

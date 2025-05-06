@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+    .container-custom {
+      padding-left: 10px; 
+      padding-right: 10px; 
+    }
+
+    .table, .table th, .table td {
+      border: none !important;
+    }
+
+    .center-img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-custom">
+
+  <h1 class="text-center">Субкультура</h1>
+
+  <p class="bg-warning text-dark text-center p-3">
+    <b>Субкультура</b> — часть культуры общества, отличающаяся своим поведением от преобладающего большинства, а также социальные группы носителей этой культуры.
+  </p>
+
+  <h2 class="text-center">Примеры музыкальных субкультур:</h2>
+
+  <div class="table-responsive">
+    <table class="table table-hover table-striped">
+      <thead class="bg-dark text-white">
+        <tr>
+          <th>Субкультура</th>
+          <th>Кто ими может быть</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bg-secondary text-white">
+          <td>Хиппи</td>
+          <td>Адепты идеи пацифизма и любители рока</td>
+        </tr>
+        <tr class="bg-dark text-white">
+          <td>Растаманы</td>
+          <td>Поклонники регги и легализации марихуаны, чья подкультура получила статус религиозного движения (растафарианства)</td>
+        </tr>
+        <tr class="bg-secondary text-white">
+          <td>Металлисты</td>
+          <td>Любители музыки в стиле металл. Самое главное у них — личностная свобода</td>
+        </tr>
+        <tr class="bg-dark text-white">
+          <td>Панки</td>
+          <td>Эти люди помимо любви к панк-року объединены чистым противостоянием себя обществу (анархисты)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Центрирование и адаптивность картинки -->
+  <img src="./Screenshot 2023-06-20 022130.jfif" class="center-img img-fluid my-4" alt="Изображение субкультур">
+
+  <!-- Пагинация -->
+  <ul class="pagination justify-content-start">
+    <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Следующая</a></li>
+  </ul>
+
+</div>
+
+</body>
+</html>

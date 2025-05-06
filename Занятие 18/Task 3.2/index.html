@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анимация блока</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #block {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            position: relative;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="block"></div>
+
+    <script>
+        $(document).ready(function () {
+            let moveRight = 0;
+            let blockSize = 100;
+
+            $("#block").on("click", function () {
+                moveRight += 50;
+                $(this).animate({ left: moveRight + "px" }, 300);
+
+                blockSize += 10;
+                $(this).animate({ width: blockSize + "px", height: blockSize + "px" }, 300);
+
+                $(this).animate({ width: blockSize + 20 + "px" }, 300);
+            });
+        });
+    </script>
+</body>
+
+</html>
