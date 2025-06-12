@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на сайте поиска вакансий</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .reset-btn {
+            background-color: #d9534f;
+            color: white;
+        }
+
+        .interests label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+        <h2>Регистрация на сайте поиска вакансий</h2>
+
+        <label for="first-name">Имя:</label>
+        <input type="text" id="first-name" name="first_name" maxlength="50" required>
+
+        <label for="last-name">Фамилия:</label>
+        <input type="text" id="last-name" name="last_name" maxlength="50" required>
+
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="country">Страна проживания:</label>
+        <select id="country" name="country">
+            <option value="russia">Россия</option>
+            <option value="belarus">Беларусь</option>
+            <option value="kazakhstan">Казахстан</option>
+            <option value="ukraine">Украина</option>
+        </select>
+
+        <label>Дата рождения:</label>
+        <select name="day">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+        <select name="month">
+            <option>Январь</option>
+            <option>Февраль</option>
+            <option>Март</option>
+        </select>
+        <select name="year">
+            <option>2000</option>
+            <option>2001</option>
+            <option>2002</option>
+        </select>
+
+        <label>Пол:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Мужской</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Женский</label>
+
+        <label>Интересы:</label>
+        <div class="interests">
+            <input type="checkbox" id="it" name="interest" value="it">
+            <label for="it">IT</label>
+            <input type="checkbox" id="finance" name="interest" value="finance">
+            <label for="finance">Финансы</label>
+            <input type="checkbox" id="design" name="interest" value="design">
+            <label for="design">Дизайн</label>
+        </div>
+
+        <label for="notes">Примечания:</label>
+        <textarea id="notes" name="notes" rows="4" placeholder="Введите ваши примечания..."></textarea>
+
+        <label>Загрузите фото профиля:</label>
+        <input type="file" accept="image/*">
+
+        <button type="submit" class="submit-btn">Отправить</button>
+        <button type="reset" class="reset-btn">Очистить форму</button>
+    </form>
+
+</body>
+
+</html>

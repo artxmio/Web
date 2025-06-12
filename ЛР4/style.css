@@ -1,0 +1,57 @@
+body {
+    font-size: 18px;
+    color: white;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+p[title],
+a[title] {
+    color: yellow;
+    font-weight: bold;
+}
+
+h2.test {
+    color: lightgreen;
+    text-decoration: underline;
+}
+
+.one.two.four {
+    background-color: orange;
+    padding: 10px;
+    border: 2px solid red;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+    border: 10px black dashed;
+}
+
+.text {
+    background-color: yellow;
+    width: 50%;
+    font-size: 50px;
+    color: black;
+}
+
+.image {
+    background-color: red;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+
+    display: flex;
+}
+
+img {
+    width: 75%;
+    height: 75%;
+    margin: 5%;
+}
+
+.back {
+    background-color: rgba(96, 79, 79, 0.5);
+}

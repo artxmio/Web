@@ -1,0 +1,77 @@
+table {
+    border-collapse: collapse;
+    width: 600px;
+    text-align: center;
+}
+
+td {
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.cl1 {
+    color: blue;
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+}
+
+.cl2 {
+    color: red;
+    font-weight: bold;
+}
+
+.cl3 {
+    color: green;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+}
+
+.cl4 {
+    color: black;
+    border: 2px solid red;
+}
+
+.cl5 {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#outerBlock {
+    width: 200px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid blue;
+}
+
+button #innerButton {
+    padding: 10px;
+    cursor: pointer;
+}
+
+button #addButton {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#container {
+    margin-top: 10px;
+}

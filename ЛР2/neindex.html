@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/skull.ico" type="image/x-icon">
+    <title>Замена изображения</title>
+    <style>
+        body {
+            background-image: url('/img/vesna.jpg');
+            background-size: cover;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .responsive-image {
+            content: url('img/leto.jpg');
+            width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-image {
+                content: url('img/osen.jpg');
+            }
+        }
+
+        .gallery img {
+            width: 300px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+
+        .caption {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Замена изображения</h1>
+    <img class="responsive-image" src="img/leto.jpg" alt="Пример изображения">
+
+    <h1>Пример обычного изображения</h1>
+    <img src="/img/zima.jpg" alt="Обычное изображение" width="400">
+
+    <h1>Кнопка с изображением</h1>
+    <a href="#" class="button">
+        <img src="/img/leto.jpg" alt="Иконка"> Нажми меня
+    </a>
+
+    <h1>Пример изображения с подписью</h1>
+    <figure>
+        <img src="/img/osen.jpg" alt="Пример изображения" width="400">
+        <figcaption>Это изображение природы. Прекрасно, не правда ли?</figcaption>
+    </figure>
+
+    <h1>Изображения</h1>
+    <div class="gallery">
+        <img src="/img/osen.jpg" alt="Изображение 1">
+        <img src="/img/vesna.jpg" alt="Изображение 2">
+        <img src="/img/zima.jpg " alt="Изображение 3">
+    </div>
+    <div class="caption">
+        Это общая подпись для всех изображений.
+    </div>
+
+    <h1>Прослушивание аудио</h1>
+    <audio controls loop>
+        <source src="/Music/Rick Astley - Never Gonna Give You Up.mp3" type="audio/mpeg">
+        asd
+    </audio>
+
+    <h1>Видео</h1>
+    <video controls poster="/img/leto.jpg" width="640" height="360">
+        <source src="/Video/Magazin-muzykalnyh-instrumentov-Strunchic.mp4" type="video/mp4">
+        <track src="Files/subtitles.vtt" kind="subtitles" srclang="ru" label="Русский">
+    </video>
+
+</body>
+
+</html>
