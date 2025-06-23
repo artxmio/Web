@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="cityForm">
+        <input type="text" id="cityName" placeholder="Название города" required>
+        <input type="number" id="population" placeholder="Население" required>
+        <button type="submit">Добавить</button>
+    </form>
+    <ul id="cityList"></ul>
+
+    <input type="text" id="numbers" placeholder="Напр. 3, 5, 1, 9">
+    <button onclick="processNumbers()">Рассчитать</button>
+    <div id="arrayResult"></div>
+
+    <button onclick="startClock()">Показать дату</button>
+    <div id="clock"></div>
+
+
+    <div id="gallery">
+        <img src="imgs/thumb1.jpg" data-full="full1.jpg" class="thumb" width="100">
+        <img src="imgs/thumb2.jpg" data-full="full2.jpg" class="thumb" width="100">
+    </div>
+
+    <div id="modal" class="modal" onclick="this.style.display='none'">
+        <img id="modalImg">
+    </div>
+
+    <input type="number" id="bet" placeholder="Введите ставку">
+    <button onclick="playLottery()">Играть</button>
+    <div id="lotteryResult"></div>
+
+    <script src="/scripts/script1.js"></script>
+    <script src="/scripts/script2.js"></script>
+    <script src="/scripts/script3.js"></script>
+    <script src="/scripts/script4.js"></script>
+    <script src="/scripts/script5.js"></script>
+</body>
+
+</html>

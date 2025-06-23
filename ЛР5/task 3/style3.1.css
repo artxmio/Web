@@ -1,0 +1,39 @@
+.container {
+    width: 100%;
+    height: 90vh;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+}
+
+.header {
+    background-color: red;
+    height: 30vh;
+}
+
+.left {
+    background-color: greenyellow;
+    height: 30vh;
+    width: 33%;
+}
+
+.center {
+    background-color: deepskyblue;
+    height: 30vh;
+    width: 34%;
+}
+
+.right {
+    background-color: green;
+    height: 30vh;
+    width: 33%;
+}
+
+.footer {
+    background-color: blue;
+    height: 30vh;
+}
